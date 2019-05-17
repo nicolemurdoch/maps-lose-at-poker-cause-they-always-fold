@@ -16,29 +16,29 @@
     <div id="mapContainer">
       <div id="sidebar">
         <div class="info-box">
-          <h3>"Allez au Senegal!"</h3>
-          <span id="address">Let's 'Virtually' Fly around some of my favorite areas of this beautiful country!</span><br/>
+          <h3>Allez au Senegal!</h3>
+          <span id="address">Let's 'Virtually' Fly around some of my favorite areas of this beautiful country</span><br/>
           <span id="Senegal"></span>
         </div>
+         <!-- This div contains your 'fly to' buttons. they use data attributes that can easily be pulled using jquery -->
         <div class="info-box">
           <h3>Fly to Region:</h3>
-          <!-- These buttons use data attributes, which we can easily pull using jquery -->
           <button class="flyto" data-region="saint-louis">Saint Louis</button>
           <button class="flyto" data-region="kedougou">Kedougou</button>
           <button class="flyto" data-region="dakar">Dakar</button>
           <hr/>
           <button class="flyto" data-region="nyc">Fly back to NYC</button>
         </div>
+
+        <!-- This divider sets up your legend box contained in the map-->
         <div class="info-box legend">
           <h3>Legend</h3>
-            <br/>lalala
         </div>
       </div>
     </div>
-
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <!-- sources MapBox GL JS javascript -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>

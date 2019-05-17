@@ -6,7 +6,7 @@ var map = new mapboxgl.Map({
   container: 'mapContainer',
   style: 'mapbox://styles/mapbox/dark-v9',
   center: [-14.732666,14.232438],
-  zoom: 6,
+  zoom: 5,
 });
 
 // Add zoom and rotation controls to the map.
@@ -26,10 +26,10 @@ map.on('style.load', function() {
   // we have 4 buttons, but can listen for clicks on any of them with just one listener
   $('.flyto').on('click', function(e) {
     // pull out the data attribute for the neighborhood using query
-    var region = $(e.target).data('region-name');
+    var region = $(e.target).data('region');
 
     // this is a useful notation for looking up a key in an object using a variable
-    var center = regionLookup[region-name];
+    var center = regionLookup[region];
 
     // fly to the neighborhood's center point
     map.flyTo({center: center, zoom: 12});
@@ -49,72 +49,16 @@ map.on('style.load', function() {
   map.addLayer({
     id: 'sene-regions-fill',
     type: 'fill',
-    source: 'sene-regions.geojson',
+    source: 'sene-regions',
     paint: {
       'fill-opacity': 0.7,
       'fill-color': {
         type: 'categorical',
-        property: 'region-name',
+        property: 'region',
         stops: [
           [
             'Matam',
             "green"
-          ]
-          [
-            'Dakar',
-            "tomato"
-          ]
-          [
-            'Thies',
-            "yellow"
-          ]
-          [
-            'Linguere',
-            "green"
-          ]
-          [
-            'Tambacounda',
-            "navy"
-          ]
-          [
-            'Kedougou',
-            "blue"
-          ]
-          [
-            'Kolda',
-            "teal"
-          ]
-          [
-            'Sedhiou',
-            "orange"
-          ]
-          [
-            'Ziguinchor',
-            "yellow"
-          ]
-          [
-            'Saint-Louis',
-            "tan"
-          ]
-          [
-            'Louga',
-            "brown"
-          ]
-          [
-            'Fatick',
-            "blue"
-          ]
-          [
-            'Diourbel',
-            "red"
-          ]
-          [
-            'Kaffrine',
-            "gold"
-          ]
-          [
-            'Kaolack',
-            "#FFFFFF"
           ]
         ]
       }
@@ -148,7 +92,7 @@ map.on('style.load', function() {
     source: 'highlight-feature',
     paint: {
       'line-width': 3,
-      'line-opacity': 0.9,
+      'line-opacity': 0.5,
       'line-color': 'black',
     }
   });

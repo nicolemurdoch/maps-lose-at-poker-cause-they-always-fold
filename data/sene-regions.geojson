@@ -26,7 +26,7 @@
       "properties": {
         "Shape_Leng": 1.49433740441,
         "Shape_Area": 0.0456666543535,
-        "region-name": "Dakar"
+        "region": "Dakar"
       }
     },
     {
@@ -91,7 +91,7 @@
       "properties": {
         "Shape_Leng": 3.38724250502,
         "Shape_Area": 0.408145671618,
-        "region-name": "Diourbel"
+        "region": "Diourbel"
       }
     },
     {
@@ -174,7 +174,7 @@
       "properties": {
         "Shape_Leng": 5.48258557908,
         "Shape_Area": 0.590113512537,
-        "region-name": "Fatick"
+        "region": "Fatick"
       }
     },
     {
@@ -239,7 +239,7 @@
       "properties": {
         "Shape_Leng": 4.24801814292,
         "Shape_Area": 0.925081017061,
-        "region-name": "Kaffrine"
+        "region": "Kaffrine"
       }
     },
     {
@@ -299,7 +299,7 @@
       "properties": {
         "Shape_Leng": 3.98402853833,
         "Shape_Area": 0.440336500221,
-        "region-name": "Kaolack"
+        "region": "Kaolack"
       }
     },
     {
@@ -419,7 +419,7 @@
       "properties": {
         "Shape_Leng": 7.746548716,
         "Shape_Area": 1.39852500459,
-        "region-name": "Kedougou"
+        "region": "Kedougou"
       }
     },
     {
@@ -516,7 +516,7 @@
       "properties": {
         "Shape_Leng": 6.57420954859,
         "Shape_Area": 1.14397211307,
-        "region-name": "Kolda"
+        "region": "Kolda"
       }
     },
     {
@@ -611,7 +611,7 @@
       "properties": {
         "Shape_Leng": 7.69747108614,
         "Shape_Area": 2.16035091506,
-        "region-name": "Louga"
+        "region": "Louga"
       }
     },
     {
@@ -716,7 +716,7 @@
       "properties": {
         "Shape_Leng": 8.64855243063,
         "Shape_Area": 2.4266516874,
-        "region-name": "Matam"
+        "region": "Matam"
       }
     },
     {
@@ -837,7 +837,7 @@
       "properties": {
         "Shape_Leng": 8.77129702808,
         "Shape_Area": 1.60334839374,
-        "region-name": "Saint Louis"
+        "region": "Saint Louis"
       }
     },
     {
@@ -901,7 +901,7 @@
       "properties": {
         "Shape_Leng": 3.49009503217,
         "Shape_Area": 0.611914776935,
-        "region-name": "Sedhiou"
+        "region": "Sedhiou"
       }
     },
     {
@@ -1074,7 +1074,7 @@
       "properties": {
         "Shape_Leng": 13.0911324836,
         "Shape_Area": 3.56449931092,
-        "region-name": "Tambacounda"
+        "region": "Tambacounda"
       }
     },
     {
@@ -1149,7 +1149,7 @@
       "properties": {
         "Shape_Leng": 4.61006278036,
         "Shape_Area": 0.553314999489,
-        "region-name": "Thies"
+        "region": "Thies"
       }
     },
     {
@@ -1210,7 +1210,7 @@
       "properties": {
         "Shape_Leng": 3.73396039097,
         "Shape_Area": 0.61232234142,
-        "region-name": "Ziguinchor"
+        "region": "Ziguinchor"
       }
     }
   ]
