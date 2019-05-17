@@ -26,10 +26,10 @@ map.on('style.load', function() {
   // we have 4 buttons, but can listen for clicks on any of them with just one listener
   $('.flyto').on('click', function(e) {
     // pull out the data attribute for the neighborhood using query
-    var region = $(e.target).data('region');
+    var region = $(e.target).data('region-name');
 
     // this is a useful notation for looking up a key in an object using a variable
-    var center = regionLookup[region];
+    var center = regionLookup[region-name];
 
     // fly to the neighborhood's center point
     map.flyTo({center: center, zoom: 12});
@@ -40,25 +40,95 @@ map.on('style.load', function() {
   map.setPaintProperty('water', 'fill-color', '#a4bee8')
 
   // this sets up the geojson as a source in the map, which I can use to add visual layers
-  map.addSource('senegal', {
+  map.addSource('sene-regions', {
     type: 'geojson',
-    data: './data/senegal.geojson',
+    data: './data/sene-regions.geojson',
   });
 
-  // add a custom-styled layer for districts
+  // add a custom-styled layer for regions
   map.addLayer({
-    id: 'senegal-districts-fill',
+    id: 'sene-regions-fill',
     type: 'fill',
-    source: 'senegal',
+    source: 'sene-regions.geojson',
     paint: {
       'fill-opacity': 0.7,
       'fill-color': {
         type: 'categorical',
-        property: 'region',
+        property: 'region-name',
         stops: [
-
+          [
+            'Matam',
+            "green"
+          ]
+          [
+            'Dakar',
+            "tomato"
+          ]
+          [
+            'Thies',
+            "yellow"
+          ]
+          [
+            'Linguere',
+            "green"
+          ]
+          [
+            'Tambacounda',
+            "navy"
+          ]
+          [
+            'Kedougou',
+            "blue"
+          ]
+          [
+            'Kolda',
+            "teal"
+          ]
+          [
+            'Sedhiou',
+            "orange"
+          ]
+          [
+            'Ziguinchor',
+            "yellow"
+          ]
+          [
+            'Saint-Louis',
+            "tan"
+          ]
+          [
+            'Louga',
+            "brown"
+          ]
+          [
+            'Fatick',
+            "blue"
+          ]
+          [
+            'Diourbel',
+            "red"
+          ]
+          [
+            'Kaffrine',
+            "gold"
+          ]
+          [
+            'Kaolack',
+            "#FFFFFF"
+          ]
         ]
-        }
+      }
+    }
+  }, 'waterway-label')
+
+  map.addLayer({
+    id: 'sene-regions-line',
+    type: 'line',
+    source: 'sene-regions',
+    paint: {
+      'line-opacity': 0.7,
+      'line-width': 4,
+      'line-color': "white",
     }
   }, 'waterway-label')
 
@@ -87,7 +157,7 @@ map.on('style.load', function() {
   map.on('mousemove', function (e) {
     // query for the features under the mouse, but only in the lots layer
     var features = map.queryRenderedFeatures(e.point, {
-        layers: ['senegal-districts-fill'],
+        layers: ['sene-regions-fill'],
     });
 
     // get the first feature from the array of returned features.
