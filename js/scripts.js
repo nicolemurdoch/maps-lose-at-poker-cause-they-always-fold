@@ -51,14 +51,70 @@ map.on('style.load', function() {
     type: 'fill',
     source: 'sene-regions',
     paint: {
-      'fill-opacity': 0.7,
+      'fill-opacity': 0.5,
       'fill-color': {
         type: 'categorical',
         property: 'region',
         stops: [
           [
+            'Kedougou',
+            "#ff5050"
+          ],
+          [
+             'Dakar',
+             "tomato"
+          ],
+          [
+             'Thies',
+             "#8600b3"
+          ],
+          [
+             'Linguere',
+             "#ff884d"
+          ],
+          [
+             'Tambacounda',
+             "#77b300"
+          ],
+          [
+             'Kolda',
+             "#005c99"
+          ],
+          [
+             'Sedhiou',
+             "#bf4080"
+          ],
+          [
+             'Ziguinchor',
+             "orange"
+          ],
+          [
+             'Saint Louis',
+             "#ffcc99"
+          ],
+          [
+             'Louga',
+             "#9999ff"
+          ],
+          [
+             'Fatick',
+             "#39ac39"
+          ],
+          [
+             'Diourbel',
+             "#b3b300"
+          ],
+          [
+             'Kaffrine',
+             "yellow"
+          ],
+          [
+             'Kaolack',
+             "#6600ff"
+          ],
+          [
             'Matam',
-            "green"
+            "#ffb3b3"
           ]
         ]
       }
@@ -71,7 +127,7 @@ map.on('style.load', function() {
     source: 'sene-regions',
     paint: {
       'line-opacity': 0.7,
-      'line-width': 4,
+      'line-width': 2,
       'line-color': "white",
     }
   }, 'waterway-label')
